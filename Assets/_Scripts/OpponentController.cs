@@ -21,10 +21,6 @@ public class OpponentController : Person
             HandleMovement();
 
         }
-        /*else if(GameManager.GameState == Screens.Final)
-        {
-            gameObject.SetActive(false);
-        }*/
         else
         {
             rigidbody.velocity = Vector3.zero;
@@ -45,16 +41,16 @@ public class OpponentController : Person
             if (Physics.Raycast(ray, out raycastHit, rayLength, obstacleMask))
             {
                 Debug.DrawRay(transform.position + transform.up, direction * rayLength, Color.red, 0f);
-                if (transform.position.x > -.5f && transform.position.x < .5f)
+                /*if (transform.position.x > -.5f && transform.position.x < .5f)
                 {
                     float newPosition = Random.Range(Random.Range(-sideMovementLimit, -3.5f), Random.Range(3.5f, sideMovementLimit));
                     transform.position = new Vector3(newPosition, transform.position.y, transform.position.z);
-                }
-                else if (transform.position.x <= -.5f)
+                }*/
+                if (transform.position.x <= 0)
                 {
                     transform.position += Vector3.left * sideMovementSpeed * Time.fixedDeltaTime;
                 }
-                else if (transform.position.x >= .5f)
+                else if (transform.position.x > 0)
                 {
                     transform.position += Vector3.right * sideMovementSpeed * Time.fixedDeltaTime;
                 }
@@ -67,11 +63,11 @@ public class OpponentController : Person
         }
         if(transform.position.x > sideMovementLimit)
         {
-            transform.position = new Vector3(0, transform.position.y, transform.position.z);
+            transform.position = new Vector3(1, transform.position.y, transform.position.z);
         }
         else if (transform.position.x < -sideMovementLimit)
         {
-            transform.position = new Vector3(0, transform.position.y, transform.position.z);
+            transform.position = new Vector3(-1, transform.position.y, transform.position.z);
         }
         HandleForwardMovement();
     }

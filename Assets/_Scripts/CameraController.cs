@@ -30,6 +30,7 @@ public class CameraController : MonoBehaviour
         //transform.position = new Vector3(0, transform.position.y, transform.position.z);
         offset = paintingStageOffset;    
         transform.Rotate(Vector3.right * -10);
+        lerpValue = 5;
     }
     private void Singelton()
     {

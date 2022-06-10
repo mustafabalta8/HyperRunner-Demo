@@ -807,8 +807,8 @@ MonoBehaviour:
   sideMovementLimit: 6
   movementDirection: {x: 0, y: 0, z: 1}
   numberOfRays: 5
-  rayAngle: 80
-  rayLength: 2
+  rayAngle: 45
+  rayLength: 4
   obstacleMask:
     serializedVersion: 2
     m_Bits: 8

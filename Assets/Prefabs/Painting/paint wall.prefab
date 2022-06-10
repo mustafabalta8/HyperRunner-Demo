@@ -110,4 +110,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Brush: {fileID: 0}
-  brushSize: 0.3
+  brushSize: 0.4
