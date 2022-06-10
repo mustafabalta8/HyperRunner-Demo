@@ -1,4 +1,4 @@
-Mad Run: A third person runner game.
+Mad Run: A third person runner game demo.
 
 Windows Build (Portrait Mode):
 
