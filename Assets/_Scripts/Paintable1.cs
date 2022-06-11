@@ -21,7 +21,7 @@ public class Paintable1 : MonoBehaviour
                     var newObj = Instantiate(Brush, hit.point + (Vector3.back * 0.1f), transform.rotation, transform);              
                     newObj.transform.localScale = Vector3.one * brushSize;
                     totalNewObject++;
-                    if (totalNewObject > 350)
+                    if (totalNewObject > 300)
                     {
                         GameManager.instance.HandleWinning();
                     }

@@ -48,7 +48,9 @@ public class PlayerController : Person
 
     private void MoveForward()
     {
-        transform.Translate(movementDirection * Time.deltaTime * forwardSpeed);
+        //transform.Translate(movementDirection * Time.deltaTime * forwardSpeed);
+        transform.position += movementDirection * Time.deltaTime * forwardSpeed;
+        //rigidbody.velocity = movementDirection*forwardSpeed;
     }
     private void HandleSideMovement()
     {
